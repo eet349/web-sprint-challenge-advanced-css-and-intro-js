@@ -22,12 +22,25 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
-1. How would you describe acessibility on the web to someone new to programming?
-2. Talk about 3 different things you can do to ensure your website is accessible. 
+1. How would you describe accessibility on the web to someone new to programming?
+
+   - We all rely on the web for all kinds of things in our lives. From ordering products from Amazon to renewing our drivers license. As much as we rely on the web not everyone can use these sites easily. Color blindness, vision impairment, a myriad of physical impairments. There are a lot of things that can prevent a person from using a site "normally". Accessibility on the web means developing software that is mindful of those who want/need your site but could have trouble using it.
+
+2. Talk about 3 different things you can do to ensure your website is accessible.
+
+   1. Semantic HTML - using meaningful elements that would be picked up with a screen reader
+   2. Contrast - using colors and backgrounds that will be easier to see and avoiding green and red as they are the most common types of color blindness.
+   3. alt attributes on images - describing the image you using in the alt tag will be read out loud by a screen reader being used by someone with a visual impairment.
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+   - A variable is simply a container for information. You can use a variable in two ways. Like a box holding information. It can also be used in place of information you don't quite have yet. A placeholder of information.
+
 4. What is the purpose of using functions in code?
 
-You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
+   - Functions are used for their reusability and to simplify code. If you abstract some of your code into a function and you give that function a meaningful name, the code will generally be a lot easier to read for yourself or a collaborator. If there is some operation that you find you are rewriting it could be put into a function to keep your code DRY.
+
+You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
 
@@ -38,17 +51,17 @@ Follow these steps to set up your project:
 1. Fork the repo
 2. Clone your forked version of the repo
 3. cd into your repo and create a branch with your first and last name
-NOTE: Tests will run for the JavaScript portion of this challenge only
+   NOTE: Tests will run for the JavaScript portion of this challenge only
 4. open the terminal in your vs code and type `npm install`
 5. next type `npm run test:watch` in your terminal
 6. Complete your work making regular commits, once you have all your tests passing and you are ready to submit your work please see canvas for instructions on how to submit
 
-### Task 2a:  Minimum Viable Product - Responsive Design
+### Task 2a: Minimum Viable Product - Responsive Design
 
-*Before you jump in, take 10 minutes to review the code that has already been provided for you. Take time to see how the home page was built. During this time, [Review the provided design files](design/). You have been provided all content necessary in the [index.html file](index.html) and basic styling in the [index.css file](css/index.css).*
+_Before you jump in, take 10 minutes to review the code that has already been provided for you. Take time to see how the home page was built. During this time, [Review the provided design files](design/). You have been provided all content necessary in the [index.html file](index.html) and basic styling in the [index.css file](css/index.css)._
 
-* [ ] Add a viewport meta tag to the head of your index.html page.
-* [ ] Add responsive breakpoints to your code for 500px such that your styles match the [mobile design file](design/Mobile.png).
+- [x] Add a viewport meta tag to the head of your index.html page.
+- [ ] Add responsive breakpoints to your code for 500px such that your styles match the [mobile design file](design/Mobile.png).
 
 ### Task 2b: Minimum Viable Product - JavaScript
 
@@ -58,10 +71,9 @@ Navigate to `index.js` and complete the MVP challenges. Note that you need to sc
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-* [ ] Website is responsive at multiple breakpoints and looks good in-between breakpoints because student is using responsive units of measurement where appropriate. Student is using most semantic HTML for each element on page and has included ARIA roles where applicable (More research may be required to impliment ARIA roles)  
-* [ ] Student demonstrates and can explain a deep understanding of basic programming concepts, when walking Team Lead through the explaination of their code.
-* [ ] Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) - do this seperate from your MVP tasks
-
+- [ ] Website is responsive at multiple breakpoints and looks good in-between breakpoints because student is using responsive units of measurement where appropriate. Student is using most semantic HTML for each element on page and has included ARIA roles where applicable (More research may be required to impliment ARIA roles)
+- [ ] Student demonstrates and can explain a deep understanding of basic programming concepts, when walking Team Lead through the explaination of their code.
+- [ ] Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) - do this seperate from your MVP tasks
 
 ## Resources
 
@@ -73,4 +85,4 @@ After finishing your required elements, you can push your work further. These go
 
 ## Submission format
 
-Please see canvas for cohort specific submission instructions 
+Please see canvas for cohort specific submission instructions
