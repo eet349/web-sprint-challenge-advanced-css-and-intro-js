@@ -332,12 +332,15 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(artistsArray) {
+	// Array for storing the artists that match the criteria
 	const filteredArtistsArray = [];
 
 	for (let i = 0; i < artistsArray.length; i++) {
+		// Readability Setup
 		const currentArtist = artistsArray[i];
 		const { name: artistsName, paintings: numPaintings } = currentArtist;
 		const paintedMoreThan100 = numPaintings > 100;
+		// Actual logic for filtering
 		if (paintedMoreThan100) {
 			filteredArtistsArray.push(artistsName);
 		}
@@ -375,12 +378,43 @@ function getHTML(/* Code here */) {
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */) {
-	/* Code here */
+/*function randomize(array) {
+	const tempArr = [...array];
+	const arrayLength = array.length;
+	for (let i = 0; i < arrayLength; i++) {
+		let randInd = randomIndex(arrayLength);
+		if (tempArr[randInd].id !== tempArr[i].id) {
+			let tempArrElm = null;
+			tempArrElm = tempArr.splice(randInd, 2, tempArr[i]);
+			tempArr.push(tempArrElm);
+		}
+	}
+	return tempArr;
 }
-
+function randomIndex(length) {
+	return Math.round(Math.random() * 100) % length;
+}
+console.log('artists.length: ', artists.length);
+const randomizedArray = randomize(artists);
+console.log('randomize: ', randomizedArray, randomizedArray.length);
+ */
 /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
- Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+ Use advanced array methods (.map, .reduce, .filter) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+const artistsBornIn1900s = artists
+	.filter((artist) => {
+		const { name: artistsName, years } = artist;
+		let [birthYear, deathYear] = years.split(' - ');
+		birthYear = Number(birthYear);
+		deathYear = Number(deathYear);
+		const bornIn1900 = birthYear >= 1900 && birthYear < 2000;
+		const diedIn1900 = deathYear > 1900 && deathYear < 2000;
+		if (bornIn1900 && diedIn1900) {
+			console.log('artistsName', artistsName);
+			return artistsName;
+		}
+	})
+	.map((artist) => artist.name);
+console.log('artistsBornIn1900s: ', artistsBornIn1900s);
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
 function foo() {
